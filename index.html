@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SoulClaw — Give Your AI Agent a Soul</title>
-  <meta name="description" content="SoulClaw brings context engineering to OpenClaw. CLI + VSCode extension with Soul community, Swarm Memory, SoulScan security, and Telegram integration.">
+  <meta name="description" content="SoulClaw brings context engineering to OpenClaw. CLI + VSCode + Android app with Soul community, 4-Tier Adaptive Memory, SoulScan security, and multi-channel integration.">
   <meta property="og:title" content="SoulClaw — Give Your AI Agent a Soul">
-  <meta property="og:description" content="OpenClaw fork with soul.md community, Swarm Memory, SoulScan security, and Telegram integration. CLI + VSCode.">
+  <meta property="og:description" content="OpenClaw fork with soul.md community, 4-Tier Adaptive Memory, SoulScan security, and multi-channel integration. CLI + VSCode + Android.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://soulclaw.sh">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
@@ -65,11 +65,13 @@
     .btn-primary:hover { background: #1d4ed8; }
     .btn-secondary { background: #1e1e2e; color: #e0e0e0; border: 1px solid #333; }
     .btn-secondary:hover { background: #2a2a3e; }
+    .btn-green { background: #059669; color: white; }
+    .btn-green:hover { background: #047857; }
 
     /* Products */
     .products {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
       margin: 60px 0;
     }
@@ -80,16 +82,37 @@
       border: 1px solid #222;
     }
     .product-icon { font-size: 2rem; margin-bottom: 12px; }
-    .product h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
-    .product p { font-size: 0.9rem; color: #888; margin-bottom: 16px; }
+    .product h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .product p { font-size: 0.85rem; color: #888; margin-bottom: 16px; }
     .product code {
       display: block;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       color: #4ade80;
       font-family: 'SF Mono', Monaco, monospace;
       background: #0a0a12;
       padding: 10px 14px;
       border-radius: 8px;
+    }
+    .product .btn {
+      display: block;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+    .product-new {
+      position: relative;
+    }
+    .new-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #dc2626;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
     }
 
     /* Features */
@@ -114,6 +137,10 @@
       border-radius: 12px;
       border: 1px solid #222;
     }
+    .feature-highlight {
+      border-color: #2563eb;
+      background: #0f1629;
+    }
     .feature-icon { font-size: 1.5rem; flex-shrink: 0; }
     .feature-title { font-weight: 600; margin-bottom: 4px; }
     .feature-desc { font-size: 0.85rem; color: #888; }
@@ -131,6 +158,53 @@
     .whatis a { color: #60a5fa; text-decoration: none; }
     .whatis a:hover { text-decoration: underline; }
 
+    /* Memory Architecture */
+    .memory-arch {
+      margin: 60px 0;
+      padding: 32px;
+      background: #0f1629;
+      border-radius: 12px;
+      border: 1px solid #1e3a5f;
+    }
+    .memory-arch h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #60a5fa;
+    }
+    .memory-arch .subtitle {
+      color: #888;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+    .tier-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .tier {
+      padding: 16px;
+      background: #12121a;
+      border-radius: 8px;
+      border: 1px solid #222;
+    }
+    .tier-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .tier-name { font-weight: 600; margin-bottom: 4px; }
+    .tier-desc { font-size: 0.8rem; color: #888; }
+    .memory-footer {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .memory-footer a { color: #60a5fa; text-decoration: none; }
+
     /* Comparison */
     .comparison { margin: 60px 0; }
     .comparison h2 {
@@ -142,21 +216,38 @@
     .compare-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
     .compare-table th, .compare-table td {
-      padding: 12px 16px;
+      padding: 12px 14px;
       text-align: left;
       border-bottom: 1px solid #1a1a2a;
     }
     .compare-table th {
       color: #888;
       font-weight: 600;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
     .compare-table td:first-child { color: #ccc; }
+
+    /* Research */
+    .research {
+      margin: 60px 0;
+      padding: 24px 32px;
+      background: #12121a;
+      border-radius: 12px;
+      border: 1px solid #222;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .research-icon { font-size: 2.5rem; flex-shrink: 0; }
+    .research-title { font-weight: 600; margin-bottom: 4px; }
+    .research-desc { font-size: 0.85rem; color: #888; margin-bottom: 8px; }
+    .research a { color: #60a5fa; text-decoration: none; font-size: 0.9rem; }
+    .research a:hover { text-decoration: underline; }
 
     /* Community */
     .community {
@@ -198,6 +289,8 @@
       .hero h1 { font-size: 2.2rem; }
       .products { grid-template-columns: 1fr; }
       .feature-grid { grid-template-columns: 1fr; }
+      .tier-grid { grid-template-columns: 1fr; }
+      .research { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -207,26 +300,34 @@
     <div class="hero">
       <div class="badge">SOULCLAW</div>
       <h1>Give your AI agent<br>a <span>soul</span></h1>
-      <p>OpenClaw made easy — with a soul.md community, Swarm Memory, SoulScan security, and Telegram integration. CLI + VSCode, zero config.</p>
+      <p>OpenClaw made easy — with a soul.md community, 4-Tier Adaptive Memory, SoulScan security, and multi-channel integration. CLI + VSCode + Android.</p>
       <div class="cta-group">
         <a href="https://clawsouls.ai/browse" class="btn btn-primary">Browse Souls</a>
         <a href="https://github.com/clawsouls/soulclaw" class="btn btn-secondary">GitHub</a>
+        <a href="https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw" class="btn btn-green">📱 Android App</a>
       </div>
     </div>
 
-    <!-- Two Products -->
+    <!-- Three Products -->
     <div class="products">
       <div class="product">
         <div class="product-icon">⌨️</div>
         <h3>SoulClaw CLI</h3>
-        <p>Terminal-first. Browse, install, and apply souls to your OpenClaw agent. Semantic memory search (Ollama bge-m3). Tiered Bootstrap saves up to 60% tokens.</p>
+        <p>Terminal-first. Browse, install, and apply souls. Semantic memory search (Ollama bge-m3). 4-Tier Adaptive Memory.</p>
         <code>$ npm install -g soulclaw</code>
       </div>
       <div class="product">
         <div class="product-icon">🧩</div>
         <h3>SoulClaw for VSCode</h3>
-        <p>Embedded AI engine in your IDE. Chat, SoulScan panel, Swarm Memory, contextual memory search, model selection — no Mac Mini required.</p>
+        <p>Embedded AI engine in your IDE. Chat, SoulScan panel, Swarm Memory, model selection — no server required.</p>
         <code>ext install clawsouls.soulclaw-vscode</code>
+      </div>
+      <div class="product product-new">
+        <span class="new-badge">NEW</span>
+        <div class="product-icon">📱</div>
+        <h3>SoulClaw Android</h3>
+        <p>Chat with your agent from your phone. Same soul, same memory, same identity — wherever you go.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw" class="btn btn-green" style="font-size:0.85rem;">Google Play →</a>
       </div>
     </div>
 
@@ -234,8 +335,39 @@
     <div class="whatis">
       <h2>What is SoulClaw?</h2>
       <p>SoulClaw is an <a href="https://github.com/openclaw/openclaw">OpenClaw</a> fork built for <strong>context engineering</strong>. We took OpenClaw's powerful agent framework and added a soul layer — community-shared persona packages that give your AI agent consistent personality, memory, and behavior.</p>
-      <p>Think of it as <strong>OpenClaw + soul.md community + specialized tools</strong>. Everything that makes OpenClaw great, plus the identity layer that makes your agent <em>yours</em>.</p>
+      <p>Think of it as <strong>OpenClaw + soul.md community + adaptive memory + specialized tools</strong>. Everything that makes OpenClaw great, plus the identity layer that makes your agent <em>yours</em>.</p>
       <p>Built on OpenClaw (MIT). SoulClaw adds the soul ecosystem on top.</p>
+    </div>
+
+    <!-- Soul Memory Architecture -->
+    <div class="memory-arch">
+      <h2>🧠 Soul Memory</h2>
+      <div class="subtitle">4-Tier Adaptive Memory Architecture — memories that persist, decay, and protect identity</div>
+      <div class="tier-grid">
+        <div class="tier">
+          <div class="tier-label">T0 — Identity Core</div>
+          <div class="tier-name">SOUL.md + IDENTITY.md</div>
+          <div class="tier-desc">Immutable. Defines who your agent is. Survives across sessions, models, and platforms.</div>
+        </div>
+        <div class="tier">
+          <div class="tier-label">T1 — Long-Term Memory</div>
+          <div class="tier-name">MEMORY.md</div>
+          <div class="tier-desc">Curated knowledge. Important decisions, people, preferences. Promoted from daily logs.</div>
+        </div>
+        <div class="tier">
+          <div class="tier-label">T2 — Short-Term Memory</div>
+          <div class="tier-name">memory/*.md</div>
+          <div class="tier-desc">Daily session logs. Auto-compacted over time. Semantic search via bge-m3 embeddings.</div>
+        </div>
+        <div class="tier">
+          <div class="tier-label">T3 — Session Context</div>
+          <div class="tier-name">Active conversation</div>
+          <div class="tier-desc">Current session. Automatically summarized and flushed to T2 on session end.</div>
+        </div>
+      </div>
+      <div class="memory-footer">
+        Less important memories decay naturally. Identity-critical ones are protected. <a href="https://blog.clawsouls.ai/posts/soul-memory-4-tier-architecture/">Read more →</a>
+      </div>
     </div>
 
     <!-- Features -->
@@ -249,6 +381,13 @@
             <div class="feature-desc">Browse, install, and publish soul.md persona packages. 30+ community souls and growing.</div>
           </div>
         </div>
+        <div class="feature feature-highlight">
+          <div class="feature-icon">🧠</div>
+          <div>
+            <div class="feature-title">4-Tier Adaptive Memory</div>
+            <div class="feature-desc">Identity-aware memory that persists, decays, and promotes. Semantic search via Ollama bge-m3. Your agent remembers what matters.</div>
+          </div>
+        </div>
         <div class="feature">
           <div class="feature-icon">🔍</div>
           <div>
@@ -257,7 +396,7 @@
           </div>
         </div>
         <div class="feature">
-          <div class="feature-icon">🧠</div>
+          <div class="feature-icon">🔄</div>
           <div>
             <div class="feature-title">Swarm Memory</div>
             <div class="feature-desc">Git-backed memory sync across machines. Branch, merge, encrypt with age. LLM-assisted conflict resolution.</div>
@@ -266,8 +405,8 @@
         <div class="feature">
           <div class="feature-icon">💬</div>
           <div>
-            <div class="feature-title">Telegram Integration</div>
-            <div class="feature-desc">Chat with your agent from your phone. Get notifications, send commands, stay connected anywhere.</div>
+            <div class="feature-title">Multi-Channel</div>
+            <div class="feature-desc">Telegram, Android app, VSCode — chat with your agent from anywhere. Same soul, same memory.</div>
           </div>
         </div>
         <div class="feature">
@@ -284,25 +423,42 @@
             <div class="feature-desc">age encryption for MEMORY.md and memory files. Your agent's memories stay private, even on shared repos.</div>
           </div>
         </div>
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <div>
+            <div class="feature-title">Promotion Detector</div>
+            <div class="feature-desc">Automatically identifies important memories in daily logs and promotes them to long-term storage. No manual curation needed.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research -->
+    <div class="research">
+      <div class="research-icon">📄</div>
+      <div>
+        <div class="research-title">Research: The Forgetting Problem</div>
+        <div class="research-desc">Why perfect memory breaks AI agent identity — and how declarative anchors fix it. The theory behind Soul Memory's architecture.</div>
+        <a href="https://doi.org/10.5281/zenodo.19132381">Read the paper (Zenodo) →</a>
       </div>
     </div>
 
     <!-- Comparison -->
     <div class="comparison">
-      <h2>CLI vs VSCode</h2>
+      <h2>CLI vs VSCode vs Android</h2>
       <table class="compare-table">
         <thead>
-          <tr><th></th><th>SoulClaw CLI</th><th>SoulClaw VSCode</th></tr>
+          <tr><th></th><th>CLI</th><th>VSCode</th><th>Android</th></tr>
         </thead>
         <tbody>
-          <tr><td>Setup</td><td>npm install -g</td><td>Extension install</td></tr>
-          <tr><td>AI Engine</td><td>Uses OpenClaw</td><td>Built-in (embedded)</td></tr>
-          <tr><td>Soul Browse</td><td>✅ Terminal UI</td><td>✅ Sidebar panel</td></tr>
-          <tr><td>SoulScan</td><td>✅ CLI scanner</td><td>✅ Visual panel + inline</td></tr>
-          <tr><td>Swarm Memory</td><td>✅ Git commands</td><td>✅ Branch/merge UI</td></tr>
-          <tr><td>Memory Search</td><td>✅ Semantic (bge-m3)</td><td>✅ Contextual</td></tr>
-          <tr><td>Telegram</td><td>✅ via OpenClaw</td><td>✅ Built-in</td></tr>
-          <tr><td>Best For</td><td>Automation, CI/CD</td><td>Daily development</td></tr>
+          <tr><td>Setup</td><td>npm install -g</td><td>Extension install</td><td>Google Play</td></tr>
+          <tr><td>AI Engine</td><td>Uses OpenClaw</td><td>Built-in</td><td>Gateway</td></tr>
+          <tr><td>Soul Browse</td><td>✅ Terminal UI</td><td>✅ Sidebar</td><td>✅ In-app</td></tr>
+          <tr><td>SoulScan</td><td>✅ CLI</td><td>✅ Visual + inline</td><td>—</td></tr>
+          <tr><td>Soul Memory</td><td>✅ 4-Tier</td><td>✅ 4-Tier</td><td>✅ via Gateway</td></tr>
+          <tr><td>Swarm Memory</td><td>✅ Git</td><td>✅ UI</td><td>—</td></tr>
+          <tr><td>Memory Search</td><td>✅ Semantic</td><td>✅ Contextual</td><td>✅ via Gateway</td></tr>
+          <tr><td>Best For</td><td>Automation</td><td>Development</td><td>On the go</td></tr>
         </tbody>
       </table>
     </div>
@@ -321,8 +477,10 @@
         <strong>SoulClaw</strong> by <a href="https://clawsouls.ai">ClawSouls</a><br>
         <a href="https://github.com/clawsouls/soulclaw">CLI (GitHub)</a> ·
         <a href="https://marketplace.visualstudio.com/items?itemName=clawsouls.soulclaw-vscode">VSCode Extension</a> ·
+        <a href="https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw">Android App</a> ·
         <a href="https://docs.clawsouls.ai">Documentation</a> ·
-        <a href="https://clawsouls.ai/soulscan">SoulScan</a>
+        <a href="https://clawsouls.ai/soulscan">SoulScan</a> ·
+        <a href="https://blog.clawsouls.ai">Blog</a>
       </p>
       <p style="margin-top: 12px;">
         Built on <a href="https://github.com/openclaw/openclaw">OpenClaw</a> (MIT)

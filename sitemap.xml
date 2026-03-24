@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://soulclaw.sh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soulclaw.sh"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://soulclaw.sh?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://soulclaw.sh?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://soulclaw.sh?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://soulclaw.sh?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://soulclaw.sh"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://soulclaw.sh?lang=ko</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://soulclaw.sh?lang=ja</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://soulclaw.sh?lang=zh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://soulclaw.sh?lang=es</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

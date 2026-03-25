@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://soulclaw.sh/sitemap.xml

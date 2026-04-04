@@ -146,10 +146,9 @@
       <h1 id="hero-title">Your AI Agent,<br><span>Always On</span></h1>
       <p id="hero-desc">A personal AI that lives in your messenger, remembers everything, and works while you sleep. Deploy in one click.</p>
       <div class="cta-group">
-        <a href="https://clawsouls.ai/hosting" class="btn btn-primary" id="hero-cta">Deploy Now — Free Trial</a>
         <a href="https://github.com/clawsouls/openclaw" class="btn btn-secondary">🦞 View Source</a>
       </div>
-      <p class="hero-sub" id="hero-sub">Starting at $7/mo · BYOK · Cancel anytime · Open Source</p>
+      <p class="hero-sub" id="hero-sub">BYOK · Open Source · Self-host or <a href="https://clawsouls.ai/hosting" style="color:#b68aff;text-decoration:underline">let us host</a></p>
     </div>
 
     <!-- How it works -->
@@ -275,8 +274,8 @@
     en: {
       heroTitle: 'Your AI Agent,<br><span>Always On</span>',
       heroDesc: 'A personal AI that lives in your messenger, remembers everything, and works while you sleep. Deploy in one click.',
-      heroCta: 'Deploy Now — Free Trial',
-      heroSub: 'Starting at $7/mo · BYOK · Cancel anytime · Open Source',
+      
+      heroSub: 'BYOK · Open Source · Self-host or <a href="https://clawsouls.ai/hosting" style="color:#b68aff;text-decoration:underline">let us host</a>',
       stepsTitle: 'Three Steps to Your AI Agent',
       step1t: 'Create Agent', step1d: 'One click in the dashboard. Pick a name, choose a region.',
       step2t: 'Add API Key', step2d: 'Paste your OpenRouter API key. Select a model — free or paid.',
@@ -303,8 +302,8 @@
     ko: {
       heroTitle: 'AI 에이전트,<br><span>항상 온라인</span>',
       heroDesc: '메신저에 살고, 모든 것을 기억하고, 당신이 자는 동안 일하는 개인 AI. 원클릭 배포.',
-      heroCta: '지금 배포 — 무료 체험',
-      heroSub: '$7/월부터 · BYOK · 언제든 해지 · 오픈소스',
+      
+      heroSub: 'BYOK · 오픈소스 · 셀프호스트 또는 <a href="https://clawsouls.ai/hosting" style="color:#b68aff;text-decoration:underline">호스팅</a>',
       stepsTitle: '3단계로 AI 에이전트 시작',
       step1t: '에이전트 생성', step1d: '대시보드에서 원클릭. 이름과 리전을 선택하세요.',
       step2t: 'API 키 추가', step2d: 'OpenRouter API 키를 붙여넣고 모델을 선택하세요.',
@@ -331,8 +330,8 @@
     ja: {
       heroTitle: 'AIエージェント、<br><span>常時稼働</span>',
       heroDesc: 'メッセンジャーに常駐し、すべてを記憶し、あなたが眠っている間も働くパーソナルAI。ワンクリックでデプロイ。',
-      heroCta: '今すぐデプロイ — 無料体験',
-      heroSub: '$7/月から · BYOK · いつでも解約 · オープンソース',
+      
+      heroSub: 'BYOK · オープンソース · セルフホスト又は<a href="https://clawsouls.ai/hosting" style="color:#b68aff;text-decoration:underline">ホスティング</a>',
       stepsTitle: '3ステップでAIエージェントを開始',
       step1t: 'エージェント作成', step1d: 'ダッシュボードでワンクリック。名前とリージョンを選択。',
       step2t: 'APIキー追加', step2d: 'OpenRouter APIキーを貼り付け、モデルを選択。',
@@ -359,8 +358,8 @@
     zh: {
       heroTitle: 'AI 智能体，<br><span>永不离线</span>',
       heroDesc: '一个住在你消息应用中的个人 AI，记住一切，在你睡觉时工作。一键部署。',
-      heroCta: '立即部署 — 免费试用',
-      heroSub: '$7/月起 · BYOK · 随时取消 · 开源',
+      
+      heroSub: 'BYOK · 开源 · 自托管或<a href="https://clawsouls.ai/hosting" style="color:#b68aff;text-decoration:underline">托管</a>',
       stepsTitle: '三步启动你的 AI 智能体',
       step1t: '创建智能体', step1d: '在控制台一键创建。选择名称和区域。',
       step2t: '添加 API 密钥', step2d: '粘贴你的 OpenRouter API 密钥，选择模型。',
@@ -387,8 +386,8 @@
     es: {
       heroTitle: 'Tu Agente IA,<br><span>Siempre Activo</span>',
       heroDesc: 'Un IA personal que vive en tu mensajero, recuerda todo y trabaja mientras duermes. Despliega en un clic.',
-      heroCta: 'Desplegar Ahora — Prueba Gratis',
-      heroSub: 'Desde $7/mes · BYOK · Cancela cuando quieras · Open Source',
+      
+      heroSub: 'BYOK · Open Source · Self-host o <a href="https://clawsouls.ai/hosting" style="color:#b68aff;text-decoration:underline">hosting</a>',
       stepsTitle: 'Tres Pasos para Tu Agente IA',
       step1t: 'Crear Agente', step1d: 'Un clic en el panel. Elige nombre y región.',
       step2t: 'Agregar API Key', step2d: 'Pega tu clave OpenRouter. Elige un modelo — gratis o de pago.',
@@ -427,7 +426,7 @@
     document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`)?.classList.add('active');
     // Apply
     const m = {
-      'hero-title':t.heroTitle,'hero-desc':t.heroDesc,'hero-cta':t.heroCta,'hero-sub':t.heroSub,
+      'hero-title':t.heroTitle,'hero-desc':t.heroDesc,'hero-sub':t.heroSub,
       'steps-title':t.stepsTitle,'step1-title':t.step1t,'step1-desc':t.step1d,'step2-title':t.step2t,'step2-desc':t.step2d,'step3-title':t.step3t,'step3-desc':t.step3d,
       'features-title':t.featTitle,'f1-title':t.f1t,'f1-desc':t.f1d,'f2-title':t.f2t,'f2-desc':t.f2d,'f3-title':t.f3t,'f3-desc':t.f3d,'f4-title':t.f4t,'f4-desc':t.f4d,'f5-title':t.f5t,'f5-desc':t.f5d,'f6-title':t.f6t,'f6-desc':t.f6d,
       'pricing-title':t.pricingTitle,'pricing-sub':t.pricingSub,

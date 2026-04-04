@@ -27,9 +27,7 @@
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Linux, macOS, Windows",
     "offers": [
-      { "@type": "Offer", "name": "Starter", "price": "7.00", "priceCurrency": "USD", "description": "Shared CPU, 512MB RAM, 1GB Storage" },
-      { "@type": "Offer", "name": "Pro", "price": "29.00", "priceCurrency": "USD", "description": "2 Shared CPUs, 1GB RAM, 3GB Storage" },
-      { "@type": "Offer", "name": "Premium", "price": "149.00", "priceCurrency": "USD", "description": "4 Dedicated CPUs, 8GB RAM, 10GB Storage" }
+      { "@type": "Offer", "name": "Hosting", "price": "7.00", "priceCurrency": "USD", "description": "Cloud AI agent hosting starting at $7/mo", "url": "https://clawsouls.ai/hosting" }
     ],
     "author": { "@type": "Organization", "name": "ClawSouls", "url": "https://clawsouls.ai" }
   }
@@ -213,54 +211,12 @@
       </div>
     </section>
 
-    <!-- Pricing -->
+    <!-- Hosting CTA -->
     <section>
-      <h2 class="section-title" id="pricing-title">Choose Your Plan</h2>
-      <p class="section-sub" id="pricing-sub">BYOK · Zero token markup · Cancel anytime</p>
-      <div class="pricing-grid">
-        <div class="plan">
-          <h3>Starter</h3>
-          <div class="plan-specs">Shared CPU · 512 MB · 1 GB</div>
-          <div class="plan-price">$7<span id="price-mo">/mo</span></div>
-          <div class="plan-note" id="starter-note">7-day free trial</div>
-          <ul>
-            <li id="p-s1">24/7 cloud hosting</li>
-            <li id="p-s2">Persistent memory</li>
-            <li id="p-s3">Messenger integration</li>
-            <li id="p-s4">Cron automation</li>
-            <li id="p-s5">BYOK</li>
-          </ul>
-          <a href="https://clawsouls.ai/hosting" class="plan-btn plan-btn-outline" id="starter-btn">Start Free Trial</a>
-        </div>
-        <div class="plan plan-highlight">
-          <div class="plan-badge" id="pro-badge">Recommended</div>
-          <h3>Pro</h3>
-          <div class="plan-specs">2 CPUs · 1 GB · 3 GB</div>
-          <div class="plan-price">$29<span>/mo</span></div>
-          <div class="plan-note" id="pro-note">3-day free trial</div>
-          <ul>
-            <li id="p-p1">Everything in Starter</li>
-            <li id="p-p2">Faster response times</li>
-            <li id="p-p3">Semantic memory search</li>
-            <li id="p-p4">Larger context windows</li>
-            <li id="p-p5">Priority support</li>
-          </ul>
-          <a href="https://clawsouls.ai/hosting" class="plan-btn plan-btn-solid" id="pro-btn">Start Free Trial</a>
-        </div>
-        <div class="plan">
-          <h3>Premium</h3>
-          <div class="plan-specs">4 Dedicated CPUs · 8 GB · 10 GB</div>
-          <div class="plan-price">$149<span>/mo</span></div>
-          <div class="plan-note" id="premium-note">For power users & teams</div>
-          <ul>
-            <li id="p-m1">Everything in Pro</li>
-            <li id="p-m2">Run local models (Ollama 7B)</li>
-            <li id="p-m3">Multi-agent workloads</li>
-            <li id="p-m4">Full semantic search</li>
-            <li id="p-m5">Dedicated resources</li>
-          </ul>
-          <a href="https://clawsouls.ai/hosting" class="plan-btn plan-btn-outline" id="premium-btn">Get Started</a>
-        </div>
+      <div style="text-align:center;padding:40px 0;">
+        <h2 class="section-title">☁️ Need Cloud Hosting?</h2>
+        <p class="section-sub" style="max-width:600px;margin:0 auto 24px;">Deploy your AI agent in one click. 24/7 uptime, persistent memory, messenger integration. Powered by OpenClaw.</p>
+        <a href="https://clawsouls.ai/hosting" class="btn btn-primary" style="font-size:1.1rem;padding:14px 32px;">ClawSouls Hosting — Starting at $7/mo →</a>
       </div>
     </section>
 

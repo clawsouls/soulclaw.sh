@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoulClaw — Your AI Agent, Always On</title>
-  <meta name="description" content="Deploy a personal AI agent built on OpenClaw that lives in your messenger, remembers everything, and works while you sleep. Starting at $7/mo. Open source, BYOK.">
-  <meta name="keywords" content="OpenClaw,AI,AI agent,AI persona,AI personality,agent persona,soul,Soul Spec,SoulSpec,SOUL.md,soul.md,hosting,AI agent hosting,AI agent deploy,context engineering,system prompt,prompt template,AI character,agent memory,agent personality,AI agent template,AI agent marketplace,Claude Code persona,cursor rules,BYOK,LLM persona,ClawSouls,SoulClaw,SoulScan,SoulHub,prompt engineering">
-  <meta property="og:title" content="SoulClaw — Your AI Agent, Always On">
-  <meta property="og:description" content="Deploy a personal OpenClaw AI agent with persistent memory, messenger integration, and 24/7 automation. Open source, bring your own key.">
+  <title>SoulClaw — Your AI Agent, In Your Pocket</title>
+  <meta name="description" content="SoulClaw is an AI agent app with a soul. Run AI on-device or bring your own key, give it a persona with SOUL.md, and let it remember you. Free on Google Play.">
+  <meta name="keywords" content="SoulClaw,AI agent app,on-device AI,local LLM,offline AI,Android AI agent,AI persona,AI personality,agent persona,soul,Soul Spec,SoulSpec,SOUL.md,soul.md,AI character,agent memory,agent personality,AI companion,BYOK,LLM persona,ClawSouls,SoulScan,SoulHub,prompt engineering,context engineering">
+  <meta property="og:title" content="SoulClaw — Your AI Agent, In Your Pocket">
+  <meta property="og:description" content="An AI agent app with a soul. On-device AI, SOUL.md personas, persistent memory, real tools. Free on Google Play.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://soulclaw.sh">
   <meta property="og:image" content="https://clawsouls.ai/og-image.png">
@@ -22,13 +22,12 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "MobileApplication",
     "name": "SoulClaw",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Linux, macOS, Windows",
-    "offers": [
-      { "@type": "Offer", "name": "Hosting", "price": "7.00", "priceCurrency": "USD", "description": "Cloud AI agent hosting starting at $7/mo", "url": "https://clawsouls.ai/hosting" }
-    ],
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Android",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "author": { "@type": "Organization", "name": "ClawSouls", "url": "https://clawsouls.ai" }
   }
   </script>
@@ -43,24 +42,35 @@
     .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
     .nav-brand { font-weight: 700; font-size: 1.1rem; color: #e0e0e0; }
     .lang-switch { display: flex; gap: 8px; }
-    .lang-btn { background: none; border: 1px solid #333; color: #888; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn { background: none; border: 1px solid #333; color: #888; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
     .lang-btn:hover, .lang-btn.active { border-color: #a78bfa; color: #a78bfa; }
 
     /* Hero */
-    .hero { text-align: center; padding: 80px 0 60px; }
-    .hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
-    .hero h1 span { color: #a78bfa; }
-    .hero p { font-size: 1.15rem; color: #999; max-width: 600px; margin: 0 auto 40px; }
-    .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn { display: inline-block; padding: 14px 32px; border-radius: 10px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s; }
-    .btn-primary { background: #7c3aed; color: white; }
-    .btn-primary:hover { background: #6d28d9; text-decoration: none; }
+    .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: center; padding: 64px 0 48px; }
+    .hero-copy h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+    .hero-copy h1 span { color: #a78bfa; }
+    .hero-copy > p { font-size: 1.1rem; color: #999; margin-bottom: 28px; }
+    .cta-group { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .play-badge img { display: block; height: 64px; }
+    .btn { display: inline-block; padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; }
     .btn-secondary { background: #1e1e2e; color: #e0e0e0; border: 1px solid #333; }
     .btn-secondary:hover { background: #2a2a3e; text-decoration: none; }
-    .hero-sub { margin-top: 16px; font-size: 0.9rem; color: #666; }
+    .hero-sub { margin-top: 14px; font-size: 0.9rem; color: #666; }
+    .ios-note { margin-top: 6px; font-size: 0.8rem; color: #555; }
+
+    /* Phone mockup */
+    .phone { width: 250px; margin: 0 auto; background: #12121a; border: 2px solid #2a2a3a; border-radius: 32px; padding: 14px 12px 18px; box-shadow: 0 20px 60px rgba(124, 58, 237, 0.18); }
+    .phone-notch { width: 80px; height: 6px; background: #2a2a3a; border-radius: 3px; margin: 0 auto 14px; }
+    .chat { display: flex; flex-direction: column; gap: 10px; }
+    .bubble { max-width: 85%; padding: 9px 13px; border-radius: 14px; font-size: 0.78rem; line-height: 1.45; }
+    .bubble.user { align-self: flex-end; background: #7c3aed; color: white; border-bottom-right-radius: 4px; }
+    .bubble.agent { align-self: flex-start; background: #1e1e2e; color: #ccc; border-bottom-left-radius: 4px; }
+    .bubble .tool { display: block; font-size: 0.68rem; color: #4ade80; font-family: 'SF Mono', Monaco, monospace; margin-bottom: 4px; }
+    .phone-status { text-align: center; margin-top: 12px; font-size: 0.65rem; color: #555; }
+    .phone-status b { color: #4ade80; font-weight: 600; }
 
     /* Section */
-    section { padding: 60px 0; }
+    section { padding: 56px 0; }
     .section-title { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 12px; }
     .section-sub { text-align: center; color: #888; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
@@ -73,42 +83,24 @@
 
     /* Features */
     .feature-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-    .feature { padding: 24px; background: #12121a; border-radius: 12px; border: 1px solid #222; }
+    .feature { padding: 24px; background: #12121a; border-radius: 12px; border: 1px solid #222; position: relative; }
     .feature-icon { font-size: 2rem; margin-bottom: 10px; }
     .feature h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
     .feature p { font-size: 0.85rem; color: #888; }
+    .chip { position: absolute; top: 16px; right: 16px; font-size: 0.65rem; font-weight: 600; color: #a78bfa; border: 1px solid #7c3aed55; padding: 2px 10px; border-radius: 20px; }
 
-    /* Pricing */
-    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; text-align: left; }
-    .plan { padding: 28px; border-radius: 16px; border: 1px solid #333; position: relative; }
-    .plan-highlight { border-color: #7c3aed; background: #1a0a2e; transform: scale(1.02); }
-    .plan-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #7c3aed; color: white; padding: 2px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
-    .plan h3 { font-size: 1.1rem; font-weight: 600; }
-    .plan-specs { font-size: 0.75rem; color: #666; margin: 4px 0 12px; }
-    .plan-price { font-size: 2.5rem; font-weight: 800; }
-    .plan-price span { font-size: 0.9rem; color: #666; font-weight: 400; }
-    .plan-note { font-size: 0.75rem; color: #a78bfa; margin: 4px 0 16px; }
-    .plan ul { list-style: none; margin-bottom: 20px; }
-    .plan li { font-size: 0.85rem; padding: 4px 0; }
-    .plan li::before { content: '✓ '; color: #a78bfa; }
-    .plan-btn { display: block; text-align: center; padding: 12px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; text-decoration: none; }
-    .plan-btn-outline { border: 1px solid #7c3aed55; color: #a78bfa; }
-    .plan-btn-outline:hover { background: #7c3aed; color: white; border-color: #7c3aed; text-decoration: none; }
-    .plan-btn-solid { background: #7c3aed; color: white; }
-    .plan-btn-solid:hover { background: #6d28d9; text-decoration: none; }
-
-    /* Self-host */
-    .selfhost { background: #12121a; border-radius: 16px; border: 1px solid #222; padding: 40px; }
-    .selfhost h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
-    .selfhost > p { color: #888; margin-bottom: 24px; }
-    .selfhost-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
-    .selfhost-card { padding: 20px; background: #0a0a0f; border-radius: 10px; border: 1px solid #1a1a2a; }
-    .selfhost-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
-    .selfhost-card p { font-size: 0.8rem; color: #888; margin-bottom: 10px; }
-    .selfhost-card code { display: block; font-size: 0.8rem; color: #4ade80; font-family: 'SF Mono', Monaco, monospace; background: #0a0a12; padding: 8px 12px; border-radius: 6px; }
+    /* Ecosystem */
+    .eco { background: #12121a; border-radius: 16px; border: 1px solid #222; padding: 40px; }
+    .eco h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+    .eco > p { color: #888; margin-bottom: 24px; }
+    .eco-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .eco-card { padding: 20px; background: #0a0a0f; border-radius: 10px; border: 1px solid #1a1a2a; }
+    .eco-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+    .eco-card p { font-size: 0.8rem; color: #888; margin-bottom: 10px; }
+    .eco-card code { display: block; font-size: 0.8rem; color: #4ade80; font-family: 'SF Mono', Monaco, monospace; background: #0a0a12; padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
 
     /* Open Source CTA */
-    .oss-cta { text-align: center; padding: 60px 0; }
+    .oss-cta { text-align: center; padding: 56px 0; }
     .oss-cta h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; }
     .oss-cta p { color: #888; max-width: 500px; margin: 0 auto 24px; }
 
@@ -120,10 +112,12 @@
     .footer-links a:hover { color: #a78bfa; }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .steps, .feature-grid, .pricing-grid, .selfhost-grid { grid-template-columns: 1fr; }
-      .plan-highlight { transform: none; }
-      .selfhost { padding: 24px; }
+      .hero { grid-template-columns: 1fr; padding: 48px 0 32px; text-align: center; }
+      .hero-copy h1 { font-size: 2.2rem; }
+      .cta-group { justify-content: center; }
+      .phone { margin-top: 24px; }
+      .steps, .feature-grid, .eco-grid { grid-template-columns: 1fr; }
+      .eco { padding: 24px; }
     }
   </style>
 </head>
@@ -143,32 +137,48 @@
 
     <!-- Hero -->
     <div class="hero">
-      <h1 id="hero-title">Your AI Agent,<br><span>Always On</span></h1>
-      <p id="hero-desc">A personal AI that lives in your messenger, remembers everything, and works while you sleep. Deploy in one click.</p>
-      <div class="cta-group">
-        <a href="https://github.com/clawsouls/soulclaw" class="btn btn-secondary">🦞 View Source</a>
+      <div class="hero-copy">
+        <h1 id="hero-title">Your AI Agent,<br><span>In Your Pocket</span></h1>
+        <p id="hero-desc">An AI agent app with a soul. Run models on your phone or bring your own key, give it a personality with SOUL.md, and let it remember you.</p>
+        <div class="cta-group">
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw"><img
+            alt="Get it on Google Play"
+            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" /></a>
+          <a href="https://clawsouls.ai/browse" class="btn btn-secondary">🎭 Browse Souls</a>
+        </div>
+        <p class="hero-sub" id="hero-sub">On-device AI · BYOK · Free, no account needed</p>
+        <p class="ios-note" id="ios-note">iOS — coming soon</p>
       </div>
-      <p class="hero-sub" id="hero-sub">BYOK · Open Source · Self-host anywhere</p>
+      <div class="phone" aria-hidden="true">
+        <div class="phone-notch"></div>
+        <div class="chat">
+          <div class="bubble user" id="mock-1">How does my day look?</div>
+          <div class="bubble agent"><span class="tool">▸ memory_search</span><span id="mock-2">Design review at 2pm — you wanted to prep the mockups first. Also, it's Mia's birthday 🎂</span></div>
+          <div class="bubble user" id="mock-3">Remind me at noon to buy a gift</div>
+          <div class="bubble agent" id="mock-4">Done — I'll ping you at 12:00 ✓</div>
+        </div>
+        <div class="phone-status"><b>●</b> <span id="mock-status">on-device model · offline</span></div>
+      </div>
     </div>
 
     <!-- How it works -->
     <section>
-      <h2 class="section-title" id="steps-title">Three Steps to Your AI Agent</h2>
+      <h2 class="section-title" id="steps-title">Up and Running in Three Steps</h2>
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
-          <h3 id="step1-title">Create Agent</h3>
-          <p id="step1-desc">One click in the dashboard. Pick a name, choose a region.</p>
+          <h3 id="step1-title">Install</h3>
+          <p id="step1-desc">Free on Google Play. No account, no sign-up — open and go.</p>
         </div>
         <div class="step">
           <div class="step-num">2</div>
-          <h3 id="step2-title">Add API Key</h3>
-          <p id="step2-desc">Paste your OpenRouter API key. Select a model — free or paid.</p>
+          <h3 id="step2-title">Give It a Soul</h3>
+          <p id="step2-desc">Pick a persona or write your own SOUL.md — tone, behavior, expertise.</p>
         </div>
         <div class="step">
           <div class="step-num">3</div>
-          <h3 id="step3-title">Start Chatting</h3>
-          <p id="step3-desc">Your agent is live. Talk via web chat or connect Telegram.</p>
+          <h3 id="step3-title">Chat — Even Offline</h3>
+          <p id="step3-desc">Use an on-device model, or plug in your API key for Claude, GPT, or Gemini.</p>
         </div>
       </div>
     </section>
@@ -178,67 +188,54 @@
       <h2 class="section-title" id="features-title">Why SoulClaw?</h2>
       <div class="feature-grid">
         <div class="feature">
-          <div class="feature-icon">💬</div>
-          <h3 id="f1-title">Lives in Your Messenger</h3>
-          <p id="f1-desc">Telegram, Discord, Signal — your agent responds where you already chat.</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🧠</div>
-          <h3 id="f2-title">Persistent Memory</h3>
-          <p id="f2-desc">4-Tier Adaptive Memory. Remembers conversations, preferences, and decisions across sessions.</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">⏰</div>
-          <h3 id="f3-title">Works While You Sleep</h3>
-          <p id="f3-desc">Cron-powered automation. Schedule tasks, receive reports, get proactive updates — 24/7.</p>
+          <div class="feature-icon">📵</div>
+          <h3 id="f1-title">AI That Stays on Your Phone</h3>
+          <p id="f1-desc">Run local models fully on-device. Works offline, and your conversations never leave your hand.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">🎭</div>
-          <h3 id="f4-title">Your Personality, Your Rules</h3>
-          <p id="f4-desc">Customize with SOUL.md — define tone, behavior, expertise. Browse 30+ community personas.</p>
+          <h3 id="f2-title">A Soul, Not a Chatbot</h3>
+          <p id="f2-desc">Personas defined in SOUL.md — an open format. Your agent's identity is a file you own and carry anywhere.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🧠</div>
+          <h3 id="f3-title">It Remembers You</h3>
+          <p id="f3-desc">Semantic memory, stored on your device. Preferences, plans, and past conversations carry over.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🛠</div>
+          <h3 id="f4-title">An Agent That Does Things</h3>
+          <p id="f4-desc">Web search, files, clipboard, notifications — real tools, with every call shown and under your approval.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">🔑</div>
-          <h3 id="f5-title">Bring Your Own Key</h3>
-          <p id="f5-desc">Use your OpenRouter API key. Pick from Claude, GPT-4o, Gemini, Llama, or free models.</p>
+          <h3 id="f5-title">Your Key, Your Models</h3>
+          <p id="f5-desc">Bring your own key for Claude, GPT, or Gemini — or use free models. No markup, no middleman.</p>
         </div>
         <div class="feature">
-          <div class="feature-icon">🦞</div>
-          <h3 id="f6-title">Fully Open Source</h3>
-          <p id="f6-desc">Built on the SoulClaw framework. Inspect every line of code. No black boxes.</p>
+          <span class="chip" id="f6-chip">Coming soon</span>
+          <div class="feature-icon">🧩</div>
+          <h3 id="f6-title">Teach It New Skills</h3>
+          <p id="f6-desc">Drop in a SKILL.md file to add abilities — compatible with the emerging Agent Skills format.</p>
         </div>
       </div>
     </section>
 
-    <!-- Hosting CTA -->
+    <!-- Ecosystem -->
     <section>
-      <div style="text-align:center;padding:40px 0;">
-        <h2 class="section-title">☁️ Need Cloud Hosting?</h2>
-        <p class="section-sub" style="max-width:600px;margin:0 auto 24px;">Deploy your AI agent in one click. 24/7 uptime, persistent memory, messenger integration. Powered by OpenClaw.</p>
-        <a href="https://clawsouls.ai/hosting" class="btn btn-primary" style="font-size:1.1rem;padding:14px 32px;">ClawSouls Hosting — Starting at $7/mo →</a>
-      </div>
-    </section>
-
-    <!-- Self-host -->
-    <section>
-      <div class="selfhost">
-        <h2 id="selfhost-title">🛠 Prefer to Self-Host?</h2>
-        <p id="selfhost-desc">SoulClaw is fully open source. Run it on your own machine — CLI, IDE, or phone.</p>
-        <div class="selfhost-grid">
-          <div class="selfhost-card">
+      <div class="eco">
+        <h2 id="eco-title">🛠 Beyond the Phone</h2>
+        <p id="eco-desc">The same souls and memory, wherever you work. SoulClaw ships as a CLI and a VSCode extension too.</p>
+        <div class="eco-grid">
+          <div class="eco-card">
             <h4>⌨️ CLI</h4>
-            <p id="sh-cli-desc">Terminal-first. Semantic memory, Soul Browse, automation.</p>
+            <p id="eco-cli-desc">Terminal-first. Semantic memory, Soul Browse, automation.</p>
             <code>npm install -g soulclaw</code>
           </div>
-          <div class="selfhost-card">
+          <div class="eco-card">
             <h4>🧩 VSCode</h4>
-            <p id="sh-vsc-desc">AI engine in your IDE. Chat, SoulScan, Swarm Memory.</p>
+            <p id="eco-vsc-desc">AI engine in your IDE. Chat, SoulScan, Swarm Memory.</p>
             <code>ext install clawsouls.soulclaw-vscode</code>
-          </div>
-          <div class="selfhost-card">
-            <h4>📱 Android</h4>
-            <p id="sh-and-desc">Chat with your agent on the go. Same soul, same identity.</p>
-            <code><a href="https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw" style="color:#4ade80;">Google Play →</a></code>
           </div>
         </div>
       </div>
@@ -247,17 +244,16 @@
     <!-- Open Source CTA -->
     <div class="oss-cta">
       <p style="color:#666;margin-bottom:8px;">🦞 Built on open source</p>
-      <h2 id="oss-title">Don't trust? Verify.</h2>
-      <p id="oss-desc">Every line of code is public. Self-host for free, or let us handle the infra.</p>
-      <a href="https://github.com/clawsouls/soulclaw" class="btn btn-secondary">⭐ Star on GitHub</a>
+      <h2 id="oss-title">Built in the Open</h2>
+      <p id="oss-desc">The SoulClaw framework and the SOUL.md format are open source — the foundations the app stands on are yours to inspect, fork, and run.</p>
+      <a href="https://github.com/clawsouls/soulclaw" class="btn btn-secondary">⭐ SoulClaw Framework on GitHub</a>
     </div>
 
     <!-- Footer -->
     <div class="footer">
       <p><strong>SoulClaw</strong> by <a href="https://clawsouls.ai">ClawSouls</a></p>
       <div class="footer-links">
-        <a href="https://clawsouls.ai/hosting">Hosting</a>
-        <a href="https://clawsouls.ai/pricing">Pricing</a>
+        <a href="https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw">Google Play</a>
         <a href="https://clawsouls.ai/browse">Soul Browse</a>
         <a href="https://clawsouls.ai/soulscan">SoulScan</a>
         <a href="https://docs.clawsouls.ai">Docs</a>
@@ -272,144 +268,139 @@
   <script>
   const T = {
     en: {
-      heroTitle: 'Your AI Agent,<br><span>Always On</span>',
-      heroDesc: 'A personal AI that lives in your messenger, remembers everything, and works while you sleep. Deploy in one click.',
-      
-      heroSub: 'BYOK · Open Source · Self-host anywhere',
-      stepsTitle: 'Three Steps to Your AI Agent',
-      step1t: 'Create Agent', step1d: 'One click in the dashboard. Pick a name, choose a region.',
-      step2t: 'Add API Key', step2d: 'Paste your OpenRouter API key. Select a model — free or paid.',
-      step3t: 'Start Chatting', step3d: 'Your agent is live. Talk via web chat or connect Telegram.',
+      heroTitle: 'Your AI Agent,<br><span>In Your Pocket</span>',
+      heroDesc: 'An AI agent app with a soul. Run models on your phone or bring your own key, give it a personality with SOUL.md, and let it remember you.',
+      heroSub: 'On-device AI · BYOK · Free, no account needed',
+      iosNote: 'iOS — coming soon',
+      mock1: 'How does my day look?',
+      mock2: "Design review at 2pm — you wanted to prep the mockups first. Also, it's Mia's birthday 🎂",
+      mock3: 'Remind me at noon to buy a gift',
+      mock4: "Done — I'll ping you at 12:00 ✓",
+      mockStatus: 'on-device model · offline',
+      stepsTitle: 'Up and Running in Three Steps',
+      step1t: 'Install', step1d: 'Free on Google Play. No account, no sign-up — open and go.',
+      step2t: 'Give It a Soul', step2d: 'Pick a persona or write your own SOUL.md — tone, behavior, expertise.',
+      step3t: 'Chat — Even Offline', step3d: 'Use an on-device model, or plug in your API key for Claude, GPT, or Gemini.',
       featTitle: 'Why SoulClaw?',
-      f1t: 'Lives in Your Messenger', f1d: 'Telegram, Discord, Signal — your agent responds where you already chat.',
-      f2t: 'Persistent Memory', f2d: '4-Tier Adaptive Memory. Remembers conversations, preferences, and decisions across sessions.',
-      f3t: 'Works While You Sleep', f3d: 'Cron-powered automation. Schedule tasks, receive reports, get proactive updates — 24/7.',
-      f4t: 'Your Personality, Your Rules', f4d: 'Customize with SOUL.md — define tone, behavior, expertise. Browse 30+ community personas.',
-      f5t: 'Bring Your Own Key', f5d: 'Use your OpenRouter API key. Pick from Claude, GPT-4o, Gemini, Llama, or free models.',
-      f6t: 'Fully Open Source', f6d: 'Built on the SoulClaw framework. Inspect every line of code. No black boxes.',
-      pricingTitle: 'Choose Your Plan', pricingSub: 'BYOK · Zero token markup · Cancel anytime',
-      mo: '/mo', starterNote: '7-day free trial', proNote: '3-day free trial', premiumNote: 'For power users & teams',
-      proBadge: 'Recommended', starterBtn: 'Start Free Trial', proBtn: 'Start Free Trial', premiumBtn: 'Get Started',
-      ps1:'24/7 cloud hosting',ps2:'Persistent memory',ps3:'Messenger integration',ps4:'Cron automation',ps5:'BYOK',
-      pp1:'Everything in Starter',pp2:'Faster response times',pp3:'Semantic memory search',pp4:'Larger context windows',pp5:'Priority support',
-      pm1:'Everything in Pro',pm2:'Run local models (Ollama 7B)',pm3:'Multi-agent workloads',pm4:'Full semantic search',pm5:'Dedicated resources',
-      selfTitle: '🛠 Prefer to Self-Host?', selfDesc: 'SoulClaw is fully open source. Run it on your own machine — CLI, IDE, or phone.',
-      shCli: 'Terminal-first. Semantic memory, Soul Browse, automation.',
-      shVsc: 'AI engine in your IDE. Chat, SoulScan, Swarm Memory.',
-      shAnd: 'Chat with your agent on the go. Same soul, same identity.',
-      ossTitle: "Don't trust? Verify.", ossDesc: 'Every line of code is public. Self-host for free, or let us handle the infra.'
+      f1t: 'AI That Stays on Your Phone', f1d: 'Run local models fully on-device. Works offline, and your conversations never leave your hand.',
+      f2t: 'A Soul, Not a Chatbot', f2d: "Personas defined in SOUL.md — an open format. Your agent's identity is a file you own and carry anywhere.",
+      f3t: 'It Remembers You', f3d: 'Semantic memory, stored on your device. Preferences, plans, and past conversations carry over.',
+      f4t: 'An Agent That Does Things', f4d: 'Web search, files, clipboard, notifications — real tools, with every call shown and under your approval.',
+      f5t: 'Your Key, Your Models', f5d: 'Bring your own key for Claude, GPT, or Gemini — or use free models. No markup, no middleman.',
+      f6t: 'Teach It New Skills', f6d: 'Drop in a SKILL.md file to add abilities — compatible with the emerging Agent Skills format.',
+      f6chip: 'Coming soon',
+      ecoTitle: '🛠 Beyond the Phone', ecoDesc: 'The same souls and memory, wherever you work. SoulClaw ships as a CLI and a VSCode extension too.',
+      ecoCli: 'Terminal-first. Semantic memory, Soul Browse, automation.',
+      ecoVsc: 'AI engine in your IDE. Chat, SoulScan, Swarm Memory.',
+      ossTitle: 'Built in the Open', ossDesc: 'The SoulClaw framework and the SOUL.md format are open source — the foundations the app stands on are yours to inspect, fork, and run.'
     },
     ko: {
-      heroTitle: 'AI 에이전트,<br><span>항상 온라인</span>',
-      heroDesc: '메신저에 살고, 모든 것을 기억하고, 당신이 자는 동안 일하는 개인 AI. 원클릭 배포.',
-      
-      heroSub: 'BYOK · 오픈소스 · 어디서나 셀프호스트',
-      stepsTitle: '3단계로 AI 에이전트 시작',
-      step1t: '에이전트 생성', step1d: '대시보드에서 원클릭. 이름과 리전을 선택하세요.',
-      step2t: 'API 키 추가', step2d: 'OpenRouter API 키를 붙여넣고 모델을 선택하세요.',
-      step3t: '채팅 시작', step3d: '에이전트가 라이브됩니다. 웹 채팅 또는 텔레그램으로 대화하세요.',
+      heroTitle: '주머니 속<br><span>AI 에이전트</span>',
+      heroDesc: '소울이 있는 AI 에이전트 앱. 폰에서 직접 모델을 돌리거나 내 API 키를 쓰고, SOUL.md로 성격을 입히고, 나를 기억하게 하세요.',
+      heroSub: '온디바이스 AI · BYOK · 무료, 계정 불필요',
+      iosNote: 'iOS — 곧 출시',
+      mock1: '오늘 일정 어때?',
+      mock2: '2시에 디자인 리뷰 — 목업 먼저 준비하기로 했었어. 그리고 오늘 미아 생일이야 🎂',
+      mock3: '12시에 선물 사라고 알려줘',
+      mock4: '완료 — 12:00에 알림 보낼게 ✓',
+      mockStatus: '온디바이스 모델 · 오프라인',
+      stepsTitle: '3단계면 시작',
+      step1t: '설치', step1d: 'Google Play에서 무료. 계정도 가입도 없이 열면 바로 시작.',
+      step2t: '소울 입히기', step2d: '페르소나를 고르거나 직접 SOUL.md 작성 — 톤, 행동, 전문성.',
+      step3t: '오프라인에서도 대화', step3d: '온디바이스 모델을 쓰거나, API 키로 Claude·GPT·Gemini 연결.',
       featTitle: '왜 SoulClaw인가?',
-      f1t: '메신저에 상주', f1d: '텔레그램, 디스코드, 시그널 — 이미 사용 중인 메신저에서 응답합니다.',
-      f2t: '영속적 메모리', f2d: '4단계 적응형 메모리. 대화, 선호도, 결정 사항을 세션 간 기억합니다.',
-      f3t: '24시간 자동화', f3d: '크론 기반 자동화. 작업 예약, 보고서 수신, 능동적 업데이트.',
-      f4t: '나만의 성격, 나만의 규칙', f4d: 'SOUL.md로 커스터마이즈 — 톤, 행동, 전문성을 정의. 30+ 커뮤니티 페르소나.',
-      f5t: '나의 API 키 사용', f5d: 'OpenRouter API 키 사용. Claude, GPT-4o, Gemini, Llama, 무료 모델 선택.',
-      f6t: '완전 오픈소스', f6d: 'SoulClaw 프레임워크 기반. 모든 코드를 검사 가능. 블랙박스 없음.',
-      pricingTitle: '플랜 선택', pricingSub: 'BYOK · 토큰 마크업 없음 · 언제든 해지',
-      mo: '/월', starterNote: '7일 무료 체험', proNote: '3일 무료 체험', premiumNote: '파워 유저 & 팀용',
-      proBadge: '추천', starterBtn: '무료 체험 시작', proBtn: '무료 체험 시작', premiumBtn: '시작하기',
-      ps1:'24/7 클라우드 호스팅',ps2:'영속적 메모리',ps3:'메신저 연동',ps4:'크론 자동화',ps5:'BYOK',
-      pp1:'Starter 전부 포함',pp2:'더 빠른 응답',pp3:'시맨틱 메모리 검색',pp4:'더 큰 컨텍스트 윈도우',pp5:'우선 지원',
-      pm1:'Pro 전부 포함',pm2:'로컬 모델 실행 (Ollama 7B)',pm3:'멀티 에이전트',pm4:'풀 시맨틱 검색',pm5:'전용 리소스',
-      selfTitle: '🛠 셀프 호스팅 선호?', selfDesc: 'SoulClaw는 완전 오픈소스입니다. CLI, IDE, 폰에서 직접 실행하세요.',
-      shCli: '터미널 우선. 시맨틱 메모리, Soul 브라우즈, 자동화.',
-      shVsc: 'IDE 내 AI 엔진. 채팅, SoulScan, Swarm Memory.',
-      shAnd: '이동 중 에이전트와 채팅. 같은 소울, 같은 정체성.',
-      ossTitle: '믿을 수 없다면? 직접 확인하세요.', ossDesc: '모든 코드가 공개되어 있습니다. 무료로 셀프호스팅하거나, 인프라는 저희에게 맡기세요.'
+      f1t: '폰 밖으로 나가지 않는 AI', f1d: '로컬 모델이 온전히 기기에서 실행. 오프라인에서도 동작하고, 대화가 손 밖으로 나가지 않습니다.',
+      f2t: '챗봇이 아니라 소울', f2d: 'SOUL.md — 열린 포맷으로 정의된 페르소나. 에이전트의 정체성은 내가 소유하고 어디든 들고 가는 파일입니다.',
+      f3t: '나를 기억한다', f3d: '기기에 저장되는 시맨틱 메모리. 선호, 계획, 지난 대화가 이어집니다.',
+      f4t: '말만 하지 않고 실행하는 에이전트', f4d: '웹 검색, 파일, 클립보드, 알림 — 진짜 도구. 모든 호출이 표시되고 승인 하에 실행됩니다.',
+      f5t: '내 키, 내 모델', f5d: 'Claude·GPT·Gemini를 내 API 키로 — 또는 무료 모델. 마크업 없음, 중간상 없음.',
+      f6t: '새 스킬 가르치기', f6d: 'SKILL.md 파일 하나로 능력 추가 — 떠오르는 Agent Skills 포맷과 호환.',
+      f6chip: '곧 출시',
+      ecoTitle: '🛠 폰 너머까지', ecoDesc: '같은 소울, 같은 메모리를 어디서든. CLI와 VSCode 확장으로도 제공됩니다.',
+      ecoCli: '터미널 우선. 시맨틱 메모리, Soul 브라우즈, 자동화.',
+      ecoVsc: 'IDE 내 AI 엔진. 채팅, SoulScan, Swarm Memory.',
+      ossTitle: '열린 기반 위에', ossDesc: 'SoulClaw 프레임워크와 SOUL.md 포맷은 오픈소스입니다 — 앱이 딛고 선 기반을 직접 검사하고, 포크하고, 실행할 수 있습니다.'
     },
     ja: {
-      heroTitle: 'AIエージェント、<br><span>常時稼働</span>',
-      heroDesc: 'メッセンジャーに常駐し、すべてを記憶し、あなたが眠っている間も働くパーソナルAI。ワンクリックでデプロイ。',
-      
-      heroSub: 'BYOK · オープンソース · どこでもセルフホスト',
-      stepsTitle: '3ステップでAIエージェントを開始',
-      step1t: 'エージェント作成', step1d: 'ダッシュボードでワンクリック。名前とリージョンを選択。',
-      step2t: 'APIキー追加', step2d: 'OpenRouter APIキーを貼り付け、モデルを選択。',
-      step3t: 'チャット開始', step3d: 'エージェントが稼働。Webチャットまたは Telegramで会話。',
+      heroTitle: 'ポケットの中の<br><span>AIエージェント</span>',
+      heroDesc: 'ソウルを持つAIエージェントアプリ。スマホ上でモデルを動かすか自分のキーを使い、SOUL.mdで個性を与え、あなたを記憶させましょう。',
+      heroSub: 'オンデバイスAI · BYOK · 無料、アカウント不要',
+      iosNote: 'iOS — 近日公開',
+      mock1: '今日の予定は？',
+      mock2: '14時にデザインレビュー — 先にモックアップを準備する予定でしたね。今日はミアの誕生日です 🎂',
+      mock3: '12時にプレゼントを買うようリマインドして',
+      mock4: '完了 — 12:00に通知します ✓',
+      mockStatus: 'オンデバイスモデル · オフライン',
+      stepsTitle: '3ステップで開始',
+      step1t: 'インストール', step1d: 'Google Playで無料。アカウントも登録も不要、開くだけ。',
+      step2t: 'ソウルを与える', step2d: 'ペルソナを選ぶか、自分でSOUL.mdを書く — トーン、行動、専門性。',
+      step3t: 'オフラインでも会話', step3d: 'オンデバイスモデル、またはAPIキーでClaude・GPT・Geminiを接続。',
       featTitle: 'なぜSoulClaw？',
-      f1t: 'メッセンジャーに常駐', f1d: 'Telegram、Discord、Signal — 普段使いのメッセンジャーで応答。',
-      f2t: '永続メモリ', f2d: '4階層適応型メモリ。会話、好み、決定をセッション間で記憶。',
-      f3t: '睡眠中も稼働', f3d: 'Cronベースの自動化。タスクスケジュール、レポート受信、24/7。',
-      f4t: 'あなたの個性、あなたのルール', f4d: 'SOUL.mdでカスタマイズ。30+のコミュニティペルソナ。',
-      f5t: '自分のキーを使用', f5d: 'OpenRouter APIキー使用。Claude、GPT-4o、Gemini、Llama対応。',
-      f6t: '完全オープンソース', f6d: 'SoulClawフレームワーク基盤。すべてのコードを検証可能。',
-      pricingTitle: 'プランを選択', pricingSub: 'BYOK · トークンマークアップなし · いつでも解約',
-      mo: '/月', starterNote: '7日間無料体験', proNote: '3日間無料体験', premiumNote: 'パワーユーザー&チーム向け',
-      proBadge: 'おすすめ', starterBtn: '無料体験を始める', proBtn: '無料体験を始める', premiumBtn: '始める',
-      ps1:'24/7クラウドホスティング',ps2:'永続メモリ',ps3:'メッセンジャー連携',ps4:'Cron自動化',ps5:'BYOK',
-      pp1:'Starterの全機能',pp2:'高速レスポンス',pp3:'セマンティック検索',pp4:'大規模コンテキスト',pp5:'優先サポート',
-      pm1:'Proの全機能',pm2:'ローカルモデル (Ollama 7B)',pm3:'マルチエージェント',pm4:'フルセマンティック検索',pm5:'専用リソース',
-      selfTitle: '🛠 セルフホスト派？', selfDesc: 'SoulClawは完全オープンソース。CLI、IDE、スマホで実行可能。',
-      shCli: 'ターミナルファースト。セマンティックメモリ、Soul Browse、自動化。',
-      shVsc: 'IDE内AIエンジン。チャット、SoulScan、Swarm Memory。',
-      shAnd: '外出先でエージェントとチャット。同じソウル、同じアイデンティティ。',
-      ossTitle: '信頼できない？検証を。', ossDesc: 'すべてのコードが公開。無料でセルフホスト、またはインフラはお任せ。'
+      f1t: 'スマホから出ないAI', f1d: 'ローカルモデルが完全にオンデバイスで動作。オフラインでも使え、会話は手の中に留まります。',
+      f2t: 'チャットボットではなくソウル', f2d: 'SOUL.md — オープンな形式で定義されたペルソナ。エージェントのアイデンティティは自分が所有するファイルです。',
+      f3t: 'あなたを記憶する', f3d: '端末に保存されるセマンティックメモリ。好み、予定、過去の会話が引き継がれます。',
+      f4t: '実際に動くエージェント', f4d: 'Web検索、ファイル、クリップボード、通知 — 本物のツール。すべての呼び出しが表示され、承認の下で実行。',
+      f5t: '自分のキー、自分のモデル', f5d: 'Claude・GPT・Geminiを自分のAPIキーで — または無料モデル。マークアップなし。',
+      f6t: '新しいスキルを教える', f6d: 'SKILL.mdファイルを置くだけで能力を追加 — 新興のAgent Skills形式と互換。',
+      f6chip: '近日公開',
+      ecoTitle: '🛠 スマホの先へ', ecoDesc: '同じソウル、同じメモリをどこでも。CLIとVSCode拡張としても提供。',
+      ecoCli: 'ターミナルファースト。セマンティックメモリ、Soul Browse、自動化。',
+      ecoVsc: 'IDE内AIエンジン。チャット、SoulScan、Swarm Memory。',
+      ossTitle: 'オープンな基盤の上に', ossDesc: 'SoulClawフレームワークとSOUL.md形式はオープンソース。アプリが立つ基盤を検証、フォーク、実行できます。'
     },
     zh: {
-      heroTitle: 'AI 智能体，<br><span>永不离线</span>',
-      heroDesc: '一个住在你消息应用中的个人 AI，记住一切，在你睡觉时工作。一键部署。',
-      
-      heroSub: 'BYOK · 开源 · 随处自托管',
-      stepsTitle: '三步启动你的 AI 智能体',
-      step1t: '创建智能体', step1d: '在控制台一键创建。选择名称和区域。',
-      step2t: '添加 API 密钥', step2d: '粘贴你的 OpenRouter API 密钥，选择模型。',
-      step3t: '开始聊天', step3d: '智能体已上线。通过网页聊天或连接 Telegram。',
+      heroTitle: '口袋里的<br><span>AI 智能体</span>',
+      heroDesc: '一个有灵魂的 AI 智能体应用。在手机上本地运行模型或使用自己的密钥，用 SOUL.md 赋予它个性，让它记住你。',
+      heroSub: '端侧 AI · BYOK · 免费，无需账号',
+      iosNote: 'iOS — 即将推出',
+      mock1: '今天日程怎么样？',
+      mock2: '下午2点设计评审 — 你想先准备好原型图。另外，今天是 Mia 的生日 🎂',
+      mock3: '中午12点提醒我买礼物',
+      mock4: '好的 — 12:00 提醒你 ✓',
+      mockStatus: '端侧模型 · 离线',
+      stepsTitle: '三步开始',
+      step1t: '安装', step1d: 'Google Play 免费下载。无需账号、无需注册，打开即用。',
+      step2t: '赋予灵魂', step2d: '选择一个人格，或自己编写 SOUL.md — 语气、行为、专长。',
+      step3t: '离线也能聊', step3d: '使用端侧模型，或用你的 API 密钥连接 Claude、GPT、Gemini。',
       featTitle: '为什么选择 SoulClaw？',
-      f1t: '常驻消息应用', f1d: 'Telegram、Discord、Signal — 在你常用的消息应用中回复。',
-      f2t: '持久记忆', f2d: '4层自适应记忆。跨会话记住对话、偏好和决策。',
-      f3t: '全天候工作', f3d: 'Cron 驱动自动化。计划任务、接收报告、24/7 主动更新。',
-      f4t: '你的个性，你的规则', f4d: '通过 SOUL.md 自定义。浏览 30+ 社区人格。',
-      f5t: '自带密钥', f5d: '使用你的 OpenRouter API 密钥。支持 Claude、GPT-4o、Gemini、Llama。',
-      f6t: '完全开源', f6d: '基于 SoulClaw 框架。检查每一行代码。没有黑箱。',
-      pricingTitle: '选择你的方案', pricingSub: 'BYOK · 零代币加价 · 随时取消',
-      mo: '/月', starterNote: '7天免费试用', proNote: '3天免费试用', premiumNote: '专业用户和团队',
-      proBadge: '推荐', starterBtn: '开始免费试用', proBtn: '开始免费试用', premiumBtn: '立即开始',
-      ps1:'24/7 云托管',ps2:'持久记忆',ps3:'消息应用集成',ps4:'Cron 自动化',ps5:'BYOK',
-      pp1:'包含 Starter 全部',pp2:'更快响应',pp3:'语义记忆搜索',pp4:'更大上下文窗口',pp5:'优先支持',
-      pm1:'包含 Pro 全部',pm2:'运行本地模型 (Ollama 7B)',pm3:'多智能体工作负载',pm4:'完整语义搜索',pm5:'专用资源',
-      selfTitle: '🛠 更喜欢自托管？', selfDesc: 'SoulClaw 完全开源。在你自己的机器上运行 — CLI、IDE 或手机。',
-      shCli: '终端优先。语义记忆、Soul 浏览、自动化。',
-      shVsc: 'IDE 内 AI 引擎。聊天、SoulScan、Swarm Memory。',
-      shAnd: '移动中与智能体聊天。同一灵魂，同一身份。',
-      ossTitle: '不信任？请验证。', ossDesc: '所有代码公开。免费自托管，或让我们处理基础设施。'
+      f1t: '不离开手机的 AI', f1d: '本地模型完全在设备上运行。离线可用，对话不出你的手心。',
+      f2t: '是灵魂，不是聊天机器人', f2d: '用开放格式 SOUL.md 定义的人格。智能体的身份是一个你拥有、随身携带的文件。',
+      f3t: '它记得你', f3d: '存储在设备上的语义记忆。偏好、计划和过去的对话都会延续。',
+      f4t: '真正做事的智能体', f4d: '网页搜索、文件、剪贴板、通知 — 真实工具，每次调用可见且需你批准。',
+      f5t: '你的密钥，你的模型', f5d: '用自己的密钥连接 Claude、GPT、Gemini — 或使用免费模型。零加价，无中间商。',
+      f6t: '教它新技能', f6d: '放入一个 SKILL.md 文件即可添加能力 — 兼容新兴的 Agent Skills 格式。',
+      f6chip: '即将推出',
+      ecoTitle: '🛠 不止于手机', ecoDesc: '同样的灵魂与记忆，随处可用。SoulClaw 也提供 CLI 和 VSCode 扩展。',
+      ecoCli: '终端优先。语义记忆、Soul 浏览、自动化。',
+      ecoVsc: 'IDE 内 AI 引擎。聊天、SoulScan、Swarm Memory。',
+      ossTitle: '建立在开放之上', ossDesc: 'SoulClaw 框架与 SOUL.md 格式均为开源 — 应用所依托的基础，你可以检查、复刻并自行运行。'
     },
     es: {
-      heroTitle: 'Tu Agente IA,<br><span>Siempre Activo</span>',
-      heroDesc: 'Un IA personal que vive en tu mensajero, recuerda todo y trabaja mientras duermes. Despliega en un clic.',
-      
-      heroSub: 'BYOK · Open Source · Self-host en cualquier lugar',
-      stepsTitle: 'Tres Pasos para Tu Agente IA',
-      step1t: 'Crear Agente', step1d: 'Un clic en el panel. Elige nombre y región.',
-      step2t: 'Agregar API Key', step2d: 'Pega tu clave OpenRouter. Elige un modelo — gratis o de pago.',
-      step3t: 'Comenzar a Chatear', step3d: 'Tu agente está activo. Habla por web chat o conecta Telegram.',
+      heroTitle: 'Tu Agente IA,<br><span>En Tu Bolsillo</span>',
+      heroDesc: 'Una app de agente IA con alma. Ejecuta modelos en tu teléfono o trae tu propia clave, dale personalidad con SOUL.md y deja que te recuerde.',
+      heroSub: 'IA en el dispositivo · BYOK · Gratis, sin cuenta',
+      iosNote: 'iOS — próximamente',
+      mock1: '¿Cómo pinta mi día?',
+      mock2: 'Revisión de diseño a las 14:00 — querías preparar los mockups antes. Además, hoy es el cumpleaños de Mia 🎂',
+      mock3: 'Recuérdame al mediodía comprar un regalo',
+      mock4: 'Hecho — te aviso a las 12:00 ✓',
+      mockStatus: 'modelo en el dispositivo · sin conexión',
+      stepsTitle: 'Listo en Tres Pasos',
+      step1t: 'Instala', step1d: 'Gratis en Google Play. Sin cuenta ni registro — abre y listo.',
+      step2t: 'Dale un Alma', step2d: 'Elige una persona o escribe tu propio SOUL.md — tono, conducta, especialidad.',
+      step3t: 'Chatea — Incluso Sin Conexión', step3d: 'Usa un modelo en el dispositivo, o conecta tu clave de Claude, GPT o Gemini.',
       featTitle: '¿Por Qué SoulClaw?',
-      f1t: 'Vive en Tu Mensajero', f1d: 'Telegram, Discord, Signal — tu agente responde donde ya chateas.',
-      f2t: 'Memoria Persistente', f2d: 'Memoria Adaptativa de 4 Niveles. Recuerda conversaciones y decisiones entre sesiones.',
-      f3t: 'Trabaja Mientras Duermes', f3d: 'Automatización con Cron. Programa tareas, recibe informes — 24/7.',
-      f4t: 'Tu Personalidad, Tus Reglas', f4d: 'Personaliza con SOUL.md. Explora 30+ personas de la comunidad.',
-      f5t: 'Trae Tu Propia Clave', f5d: 'Usa tu clave OpenRouter. Elige entre Claude, GPT-4o, Gemini, Llama.',
-      f6t: 'Totalmente Open Source', f6d: 'Basado en el framework SoulClaw. Inspecciona cada línea de código.',
-      pricingTitle: 'Elige Tu Plan', pricingSub: 'BYOK · Sin markup en tokens · Cancela cuando quieras',
-      mo: '/mes', starterNote: '7 días gratis', proNote: '3 días gratis', premiumNote: 'Para usuarios avanzados y equipos',
-      proBadge: 'Recomendado', starterBtn: 'Prueba Gratis', proBtn: 'Prueba Gratis', premiumBtn: 'Comenzar',
-      ps1:'Hosting cloud 24/7',ps2:'Memoria persistente',ps3:'Integración con mensajeros',ps4:'Automatización Cron',ps5:'BYOK',
-      pp1:'Todo en Starter',pp2:'Respuestas más rápidas',pp3:'Búsqueda semántica',pp4:'Ventanas de contexto mayores',pp5:'Soporte prioritario',
-      pm1:'Todo en Pro',pm2:'Modelos locales (Ollama 7B)',pm3:'Multi-agente',pm4:'Búsqueda semántica completa',pm5:'Recursos dedicados',
-      selfTitle: '🛠 ¿Prefieres Self-Host?', selfDesc: 'SoulClaw es totalmente open source. Ejecútalo en tu máquina — CLI, IDE o teléfono.',
-      shCli: 'Terminal primero. Memoria semántica, Soul Browse, automatización.',
-      shVsc: 'Motor IA en tu IDE. Chat, SoulScan, Swarm Memory.',
-      shAnd: 'Chatea con tu agente en movimiento. Misma alma, misma identidad.',
-      ossTitle: '¿No confías? Verifica.', ossDesc: 'Todo el código es público. Self-host gratis o déjanos manejar la infra.'
+      f1t: 'IA Que No Sale de Tu Teléfono', f1d: 'Modelos locales ejecutados por completo en el dispositivo. Funciona sin conexión y tus conversaciones no salen de tu mano.',
+      f2t: 'Un Alma, No un Chatbot', f2d: 'Personas definidas en SOUL.md — un formato abierto. La identidad de tu agente es un archivo que posees y llevas contigo.',
+      f3t: 'Te Recuerda', f3d: 'Memoria semántica guardada en tu dispositivo. Preferencias, planes y conversaciones pasadas continúan.',
+      f4t: 'Un Agente Que Hace Cosas', f4d: 'Búsqueda web, archivos, portapapeles, notificaciones — herramientas reales, cada llamada visible y bajo tu aprobación.',
+      f5t: 'Tu Clave, Tus Modelos', f5d: 'Trae tu clave de Claude, GPT o Gemini — o usa modelos gratuitos. Sin markup, sin intermediarios.',
+      f6t: 'Enséñale Nuevas Habilidades', f6d: 'Añade capacidades con un archivo SKILL.md — compatible con el emergente formato Agent Skills.',
+      f6chip: 'Próximamente',
+      ecoTitle: '🛠 Más Allá del Teléfono', ecoDesc: 'Las mismas almas y memoria, donde trabajes. SoulClaw también existe como CLI y extensión de VSCode.',
+      ecoCli: 'Terminal primero. Memoria semántica, Soul Browse, automatización.',
+      ecoVsc: 'Motor IA en tu IDE. Chat, SoulScan, Swarm Memory.',
+      ossTitle: 'Construido en Abierto', ossDesc: 'El framework SoulClaw y el formato SOUL.md son open source — las bases sobre las que se apoya la app están ahí para inspeccionar, hacer fork y ejecutar.'
     }
   };
 
@@ -426,25 +417,20 @@
     document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`)?.classList.add('active');
     // Apply
     const m = {
-      'hero-title':t.heroTitle,'hero-desc':t.heroDesc,'hero-sub':t.heroSub,
+      'hero-title':t.heroTitle,'hero-desc':t.heroDesc,'hero-sub':t.heroSub,'ios-note':t.iosNote,
+      'mock-1':t.mock1,'mock-3':t.mock3,'mock-4':t.mock4,'mock-status':t.mockStatus,
       'steps-title':t.stepsTitle,'step1-title':t.step1t,'step1-desc':t.step1d,'step2-title':t.step2t,'step2-desc':t.step2d,'step3-title':t.step3t,'step3-desc':t.step3d,
-      'features-title':t.featTitle,'f1-title':t.f1t,'f1-desc':t.f1d,'f2-title':t.f2t,'f2-desc':t.f2d,'f3-title':t.f3t,'f3-desc':t.f3d,'f4-title':t.f4t,'f4-desc':t.f4d,'f5-title':t.f5t,'f5-desc':t.f5d,'f6-title':t.f6t,'f6-desc':t.f6d,
-      'pricing-title':t.pricingTitle,'pricing-sub':t.pricingSub,
-      'starter-note':t.starterNote,'pro-note':t.proNote,'premium-note':t.premiumNote,
-      'pro-badge':t.proBadge,'starter-btn':t.starterBtn,'pro-btn':t.proBtn,'premium-btn':t.premiumBtn,
-      'p-s1':t.ps1,'p-s2':t.ps2,'p-s3':t.ps3,'p-s4':t.ps4,'p-s5':t.ps5,
-      'p-p1':t.pp1,'p-p2':t.pp2,'p-p3':t.pp3,'p-p4':t.pp4,'p-p5':t.pp5,
-      'p-m1':t.pm1,'p-m2':t.pm2,'p-m3':t.pm3,'p-m4':t.pm4,'p-m5':t.pm5,
-      'selfhost-title':t.selfTitle,'selfhost-desc':t.selfDesc,
-      'sh-cli-desc':t.shCli,'sh-vsc-desc':t.shVsc,'sh-and-desc':t.shAnd,
+      'features-title':t.featTitle,'f1-title':t.f1t,'f1-desc':t.f1d,'f2-title':t.f2t,'f2-desc':t.f2d,'f3-title':t.f3t,'f3-desc':t.f3d,'f4-title':t.f4t,'f4-desc':t.f4d,'f5-title':t.f5t,'f5-desc':t.f5d,'f6-title':t.f6t,'f6-desc':t.f6d,'f6-chip':t.f6chip,
+      'eco-title':t.ecoTitle,'eco-desc':t.ecoDesc,'eco-cli-desc':t.ecoCli,'eco-vsc-desc':t.ecoVsc,
       'oss-title':t.ossTitle,'oss-desc':t.ossDesc
     };
     for (const [id, val] of Object.entries(m)) {
       const el = document.getElementById(id);
       if (el) el.innerHTML = val;
     }
-    // /mo spans
-    document.querySelectorAll('.plan-price span').forEach(s => s.textContent = t.mo);
+    // mock-2 keeps its tool-call line; only swap the text span
+    const m2 = document.getElementById('mock-2');
+    if (m2) m2.innerHTML = t.mock2;
   }
 
   // Init from URL param

@@ -1,0 +1,20 @@
+# SoulClaw
+
+> SoulClaw is an AI agent that runs in your pocket: an Android app for chatting with AI personas ("souls"), with your own API key or fully on-device models. Souls are portable SOUL.md-style character files you can install from the gallery or write yourself.
+
+## Get it
+
+- [Android app on Google Play](https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw): the main product; iOS is coming
+- [soulclaw on npm](https://www.npmjs.com/package/soulclaw): `npm install -g soulclaw` — run souls in a terminal
+- [Source on GitHub](https://github.com/clawsouls/soulclaw): built in the open
+- [Soul gallery](https://clawsouls.ai/browse): browse installable souls
+
+## What it does
+
+- Chat with installable AI personas from the ClawSouls gallery, or bring your own
+- Works with your own API key, or entirely on-device with local models — your conversations stay on your phone
+- Tool use with an approval UI, multilingual interface (en/ko/es/ja)
+
+## Notes
+
+- The soul format follows the open Soul Spec — see [clawsouls.ai](https://clawsouls.ai) and [docs.clawsouls.ai](https://docs.clawsouls.ai).

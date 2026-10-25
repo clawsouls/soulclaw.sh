@@ -5,7 +5,7 @@
 ## Get it
 
 - [Android app on Google Play](https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw): the main product
-- [iPhone/iPad app on the App Store](https://apps.apple.com/kr/app/soulclaw/id6823857006): Korea only for now
+- [iPhone/iPad app on the App Store](https://apps.apple.com/app/id6823857006)
 - [soulclaw on npm](https://www.npmjs.com/package/soulclaw): `npm install -g soulclaw` — run souls in a terminal
 - [Source on GitHub](https://github.com/clawsouls/soulclaw): built in the open
 - [Soul gallery](https://clawsouls.ai/browse): browse installable souls

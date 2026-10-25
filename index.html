@@ -58,7 +58,6 @@
     .btn-secondary { background: #1e1e2e; color: #e0e0e0; border: 1px solid #333; }
     .btn-secondary:hover { background: #2a2a3e; text-decoration: none; }
     .hero-sub { margin-top: 14px; font-size: 0.9rem; color: #666; }
-    .ios-note { margin-top: 6px; font-size: 0.8rem; color: #555; }
 
     /* Phone mockup */
     .phone { width: 250px; margin: 0 auto; background: #12121a; border: 2px solid #2a2a3a; border-radius: 32px; padding: 14px 12px 18px; box-shadow: 0 20px 60px rgba(124, 58, 237, 0.18); }
@@ -146,13 +145,12 @@
           <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw"><img
             alt="Get it on Google Play"
             src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" /></a>
-          <a class="appstore-badge" href="https://apps.apple.com/kr/app/soulclaw/id6823857006"><img
+          <a class="appstore-badge" href="https://apps.apple.com/app/id6823857006"><img
             alt="Download on the App Store"
             src="/app-store-badge.svg" /></a>
           <a href="https://clawsouls.ai/browse" class="btn btn-secondary">🎭 Browse Souls</a>
         </div>
         <p class="hero-sub" id="hero-sub">On-device AI · BYOK · Free, no account needed</p>
-        <p class="ios-note" id="ios-note">App Store — Korea only for now</p>
       </div>
       <div class="phone" aria-hidden="true">
         <div class="phone-notch"></div>
@@ -259,7 +257,7 @@
       <p><strong>SoulClaw</strong> by <a href="https://clawsouls.ai">ClawSouls</a></p>
       <div class="footer-links">
         <a href="https://play.google.com/store/apps/details?id=com.clawsouls.soulclaw">Google Play</a>
-        <a href="https://apps.apple.com/kr/app/soulclaw/id6823857006">App Store</a>
+        <a href="https://apps.apple.com/app/id6823857006">App Store</a>
         <a href="https://clawsouls.ai/browse">Soul Browse</a>
         <a href="https://clawsouls.ai/soulscan">SoulScan</a>
         <a href="https://docs.clawsouls.ai">Docs</a>
@@ -277,7 +275,6 @@
       heroTitle: 'Your AI Agent,<br><span>In Your Pocket</span>',
       heroDesc: 'An AI agent app with a soul. Run models on your phone or bring your own key, give it a personality with SOUL.md, and let it remember you.',
       heroSub: 'On-device AI · BYOK · Free, no account needed',
-      iosNote: 'App Store — Korea only for now',
       mock1: 'How does my day look?',
       mock2: "Design review at 2pm — you wanted to prep the mockups first. Also, it's Mia's birthday 🎂",
       mock3: 'Remind me at noon to buy a gift',
@@ -304,7 +301,6 @@
       heroTitle: '주머니 속<br><span>AI 에이전트</span>',
       heroDesc: '소울이 있는 AI 에이전트 앱. 폰에서 직접 모델을 돌리거나 내 API 키를 쓰고, SOUL.md로 성격을 입히고, 나를 기억하게 하세요.',
       heroSub: '온디바이스 AI · BYOK · 무료, 계정 불필요',
-      iosNote: 'App Store — 현재 한국에서만 받을 수 있어요',
       mock1: '오늘 일정 어때?',
       mock2: '2시에 디자인 리뷰 — 목업 먼저 준비하기로 했었어. 그리고 오늘 미아 생일이야 🎂',
       mock3: '12시에 선물 사라고 알려줘',
@@ -331,7 +327,6 @@
       heroTitle: 'ポケットの中の<br><span>AIエージェント</span>',
       heroDesc: 'ソウルを持つAIエージェントアプリ。スマホ上でモデルを動かすか自分のキーを使い、SOUL.mdで個性を与え、あなたを記憶させましょう。',
       heroSub: 'オンデバイスAI · BYOK · 無料、アカウント不要',
-      iosNote: 'App Store — 現在は韓国のみ',
       mock1: '今日の予定は？',
       mock2: '14時にデザインレビュー — 先にモックアップを準備する予定でしたね。今日はミアの誕生日です 🎂',
       mock3: '12時にプレゼントを買うようリマインドして',
@@ -358,7 +353,6 @@
       heroTitle: '口袋里的<br><span>AI 智能体</span>',
       heroDesc: '一个有灵魂的 AI 智能体应用。在手机上本地运行模型或使用自己的密钥，用 SOUL.md 赋予它个性，让它记住你。',
       heroSub: '端侧 AI · BYOK · 免费，无需账号',
-      iosNote: 'App Store — 目前仅限韩国',
       mock1: '今天日程怎么样？',
       mock2: '下午2点设计评审 — 你想先准备好原型图。另外，今天是 Mia 的生日 🎂',
       mock3: '中午12点提醒我买礼物',
@@ -385,7 +379,6 @@
       heroTitle: 'Tu Agente IA,<br><span>En Tu Bolsillo</span>',
       heroDesc: 'Una app de agente IA con alma. Ejecuta modelos en tu teléfono o trae tu propia clave, dale personalidad con SOUL.md y deja que te recuerde.',
       heroSub: 'IA en el dispositivo · BYOK · Gratis, sin cuenta',
-      iosNote: 'App Store — por ahora solo en Corea',
       mock1: '¿Cómo pinta mi día?',
       mock2: 'Revisión de diseño a las 14:00 — querías preparar los mockups antes. Además, hoy es el cumpleaños de Mia 🎂',
       mock3: 'Recuérdame al mediodía comprar un regalo',
@@ -423,7 +416,7 @@
     document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`)?.classList.add('active');
     // Apply
     const m = {
-      'hero-title':t.heroTitle,'hero-desc':t.heroDesc,'hero-sub':t.heroSub,'ios-note':t.iosNote,
+      'hero-title':t.heroTitle,'hero-desc':t.heroDesc,'hero-sub':t.heroSub,
       'mock-1':t.mock1,'mock-3':t.mock3,'mock-4':t.mock4,'mock-status':t.mockStatus,
       'steps-title':t.stepsTitle,'step1-title':t.step1t,'step1-desc':t.step1d,'step2-title':t.step2t,'step2-desc':t.step2d,'step3-title':t.step3t,'step3-desc':t.step3d,
       'features-title':t.featTitle,'f1-title':t.f1t,'f1-desc':t.f1d,'f2-title':t.f2t,'f2-desc':t.f2d,'f3-title':t.f3t,'f3-desc':t.f3d,'f4-title':t.f4t,'f4-desc':t.f4d,'f5-title':t.f5t,'f5-desc':t.f5d,'f6-title':t.f6t,'f6-desc':t.f6d,'f6-chip':t.f6chip,
